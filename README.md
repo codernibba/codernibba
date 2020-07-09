@@ -1,3 +1,3 @@
 ### Hi there 👋
-    I'm Vimal kumar Web designer and devloper
+    I'm CoderNibba Web designer and devloper
 
