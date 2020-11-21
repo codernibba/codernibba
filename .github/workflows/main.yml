@@ -1,0 +1,16 @@
+name: GitHub metrics as SVG image
+on:
+  # Schedule the metrics update
+  schedule: [{cron: "0 * * * *"}]
+  # (optional) Force update a commit occurs on master branch
+  # All commits tagged with [Skip GitHub Action] are automatically ignored by this GitHub action to avoid loops
+  push: {branches: "master"}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Your GitHub token
+          token: ${{ secrets.METRICS_TOKEN }}
+          # See https://github.com/lowlighter/metrics/blob/master/action.yml for all options
